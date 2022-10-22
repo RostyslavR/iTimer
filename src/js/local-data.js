@@ -1,0 +1,16 @@
+export default {
+  LOCAL_TIMER_ID: null,
+  UPDATE_TIMERS_ID: null,
+  TIME_NOW: 0,
+  TIME_LEFT: 0,
+  LOCAL_TIME_ZONE: 0,
+  ARRIVAL_TIME_ZONE: 0,
+  DEPARTURE_TIME_ZONE: 0,
+  DEPARTURE_DATE: '2022-12-14T03:00:00Z',
+  DEPARTURE_CITY: 'shanghai cn',
+  ARRIVAL_CITY: 'ottawa ca',
+  STORAGE_KEY_TIME: 'iTimer-dep-time',
+  STORAGE_KEY_DEPARTURE: 'iTimer-dep-city',
+  STORAGE_KEY_ARRIVAL: 'iTimer-arr-city',
+  DATE_BIRTHDAY: 'Jan 01',
+};

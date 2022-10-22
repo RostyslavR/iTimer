@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "itimer",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://RostyslavR.github.io/itimer",
@@ -18,6 +18,8 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "debounce": "^1.2.1",
+    "flatpickr": "^4.6.13",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {

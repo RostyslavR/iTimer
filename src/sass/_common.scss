@@ -1,1 +1,41 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+:root {
+  --bkg-color: rgb(255, 255, 255, 0.5);
+  --text-color: #17d4fe;
+  --info-color: black;
+  --clock-color: rgb(144, 255, 79);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 15 15px;
+  margin: 0 auto;
+  min-width: 450px;
+}
+
+.isHidden {
+  opacity: 0;
+}
+
+.hide-it {
+  pointer-events: none;
+  animation: changeOpacity 3s forwards;
+}
+@keyframes changeOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

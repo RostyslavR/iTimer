@@ -1,0 +1,121 @@
+.postcard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Bodoni Moda', serif;
+  background: linear-gradient(
+      rgba(219, 213, 213, 0.1),
+      rgba(247, 237, 237, 0.1)
+    ),
+    url(../images/bday.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-postcard {
+  perspective: 1000px;
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  position: absolute;
+  top: 70px;
+  left: 270px;
+  font-family: 'Bodoni Moda', serif;
+
+  transition: 2s;
+  transform-style: preserve-3d;
+  transform: rotateY(10deg);
+
+  opacity: 1;
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+}
+.outside,
+.inside {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.outside {
+  background-color: rgb(255, 244, 79);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  backface-visibility: hidden;
+}
+.outside h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: salmon;
+  margin-bottom: 20px;
+}
+.inside {
+  background-color: rgb(255, 244, 79);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.inside h3,
+.outside h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.block {
+  position: absolute;
+  top: 200px;
+  right: 600px;
+  perspective: 800px;
+}
+
+.frames {
+  width: 400px;
+  height: 150px;
+  box-shadow: 0 5px 10px var(--bkg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5px;
+  position: absolute;
+
+  & p {
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+  }
+  &:nth-child(1) {
+    top: -110px;
+    background-color: coral;
+    transform: rotateY(-230deg) rotateX(20deg);
+  }
+  &:nth-child(2) {
+    left: -100px;
+    background-color: goldenrod;
+    transform: rotateY(-200deg) rotateX(10deg);
+  }
+  &:nth-child(3) {
+    top: 120px;
+    left: -180px;
+    background-color: burlywood;
+    transform: rotateY(-170deg) rotateX(-10deg);
+  }
+
+  & img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
