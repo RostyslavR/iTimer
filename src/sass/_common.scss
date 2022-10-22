@@ -29,8 +29,9 @@
 
 .hide-it {
   pointer-events: none;
-  animation: changeOpacity 3s forwards;
+  animation: changeOpacity 4s forwards;
 }
+
 @keyframes changeOpacity {
   0% {
     opacity: 1;

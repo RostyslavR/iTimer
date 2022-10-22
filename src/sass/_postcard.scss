@@ -8,18 +8,37 @@
   font-size: 40px;
   font-weight: 700;
   font-family: 'Bodoni Moda', serif;
-  background: linear-gradient(
-      rgba(219, 213, 213, 0.1),
-      rgba(247, 237, 237, 0.1)
-    ),
-    url(../images/bday.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.postcard-background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+}
+
 .container-postcard {
   perspective: 1000px;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--text-color);
+  // color: salmon;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .card {
@@ -29,48 +48,35 @@
   top: 70px;
   left: 270px;
   font-family: 'Bodoni Moda', serif;
-
   transition: 2s;
   transform-style: preserve-3d;
   transform: rotateY(10deg);
-
   opacity: 1;
 
   &:hover {
     transform: rotateY(180deg);
   }
-}
-.outside,
-.inside {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  text-align: center;
-  padding: 10px;
-}
-.outside {
-  background-color: rgb(255, 244, 79);
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  backface-visibility: hidden;
-}
-.outside h1 {
-  font-size: 25px;
-  font-weight: bold;
-  color: salmon;
-  margin-bottom: 20px;
-}
-.inside {
-  background-color: rgb(255, 244, 79);
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-.inside h3,
-.outside h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
+
+  &-outside,
+  &-inside {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+  &-outside {
+    background-color: rgb(255, 244, 79);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  &-inside {
+    background-color: rgb(255, 244, 79);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
 }
 
 .block {
