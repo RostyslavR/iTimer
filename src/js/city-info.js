@@ -74,7 +74,7 @@ function makeMarkUp(data, nameInputId) {
   <div class="wether">
     <div class="wether-pic">
       <img src="https://openweathermap.org/img/wn/${weather[0].icon}.png"
-        alt="${weather[0].description}" width="50px" heirht="50px">
+        alt="${weather[0].description}" width="50" height="50">
     </div>  
     <p class="wether-temp">&nbsp  ${main.temp}°С </p>
   </div>
