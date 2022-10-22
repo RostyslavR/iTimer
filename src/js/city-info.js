@@ -69,7 +69,7 @@ async function handleCityInfo() {
 
 function makeMarkUp(data, nameInputId) {
   const { coord, weather, main, wind } = data;
-  return (markUp = `
+  return `
   <p>&nbsp &nbsp &nbsp &nbsp &nbsp lon: ${coord.lon},   lat ${coord.lat}</p>
   <div class="wether">
     <div class="wether-pic">
@@ -83,7 +83,7 @@ function makeMarkUp(data, nameInputId) {
     weather[0].description
   },</p><p> wind ${toTextualDescription(wind.deg)} ${wind.speed}m/s </p>
     </div>
-`);
+`;
 }
 
 // function toQueryStr(str) {
