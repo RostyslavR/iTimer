@@ -79,9 +79,8 @@ function makeMarkUp(data, nameInputId) {
     <p class="wether-temp">&nbsp  ${main.temp}°С </p>
   </div>
     <div class="wether-desc">
-      <p>feels like: ${main.feels_like}°С, ${
-    weather[0].description
-  },</p><p> wind ${toTextualDescription(wind.deg)} ${wind.speed}m/s </p>
+      <p>feels like: ${main.feels_like}°С, ${weather[0].description},</p>
+      <p> wind ${toTextualDescription(wind.deg)} ${wind.speed}m/s </p>
     </div>
 `;
 }

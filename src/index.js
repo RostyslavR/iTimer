@@ -10,7 +10,7 @@ updateCityInfo();
 updateTimers();
 localIimer();
 
-const closePostCard_ID = setTimeout(closePostCard, 30000);
+// const closePostCard_ID = setTimeout(closePostCard, 30000);
 refs.Card.addEventListener('click', closePostCard);
 
 function init() {

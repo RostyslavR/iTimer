@@ -15,12 +15,14 @@
   --clock-color: rgb(144, 255, 79);
 }
 
+$tablet: 768px;
+
 .container {
   display: flex;
   flex-direction: column;
-  padding: 15 15px;
-  margin: 0 auto;
-  min-width: 450px;
+  padding: 15px;
+  // margin: 0 auto;
+  min-width: 320px;
 }
 
 .isHidden {

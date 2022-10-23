@@ -1,16 +1,16 @@
 .postcard {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100vw;
+  // height: 100vh;
   text-align: center;
-  font-size: 40px;
-  font-weight: 700;
+  // font-size: 40px;
+  // font-weight: 700;
   font-family: 'Bodoni Moda', serif;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
 .postcard-background {
@@ -18,104 +18,52 @@
   z-index: -1;
   top: 0;
   left: 0;
-  width: 100vw;
   height: 100vh;
-  object-fit: fill;
-}
-
-.container-postcard {
-  perspective: 1000px;
+  object-fit: cover;
+  @media screen and (min-width: $tablet) {
+    width: 100vw;
+    // height: 100vh;
+    object-fit: fill;
+  }
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   color: var(--text-color);
   // color: salmon;
   margin-top: 20px;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.card {
-  width: 280px;
-  height: 360px;
-  position: absolute;
-  top: 70px;
-  left: 270px;
-  font-family: 'Bodoni Moda', serif;
-  transition: 2s;
-  transform-style: preserve-3d;
-  transform: rotateY(10deg);
-  opacity: 1;
-
-  &:hover {
-    transform: rotateY(180deg);
-  }
-
-  &-outside,
-  &-inside {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    text-align: center;
-    padding: 10px;
-  }
-  &-outside {
-    background-color: rgb(255, 244, 79);
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  &-inside {
-    background-color: rgb(255, 244, 79);
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
+  @media screen and (min-width: $tablet) {
+    font-size: 50px;
   }
 }
 
-.block {
-  position: absolute;
-  top: 200px;
-  right: 600px;
+.frames-block {
+  width: 100%;
+  height: 30vh;
   perspective: 800px;
+  @media screen and (min-width: $tablet) {
+    width: 40%;
+    height: 30vh;
+  }
 }
 
 .frames {
-  width: 400px;
-  height: 150px;
-  box-shadow: 0 5px 10px var(--bkg-color);
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 5px;
-  position: absolute;
+  justify-content: flex-start;
+  gap: 10%;
+  padding: 10px;
+  // width: 400px;
+  // height: 150px;
+  min-width: 100%;
+  min-height: 20%;
+  box-shadow: 0 5px 10px var(--bkg-color);
 
   & p {
     font-size: 20px;
     font-weight: bold;
-    transform: rotateY(180deg);
-  }
-  &:nth-child(1) {
-    top: -110px;
-    background-color: coral;
-    transform: rotateY(-230deg) rotateX(20deg);
-  }
-  &:nth-child(2) {
-    left: -100px;
-    background-color: goldenrod;
-    transform: rotateY(-200deg) rotateX(10deg);
-  }
-  &:nth-child(3) {
-    top: 120px;
-    left: -180px;
-    background-color: burlywood;
-    transform: rotateY(-170deg) rotateX(-10deg);
   }
 
   & img {
@@ -124,4 +72,24 @@ h3 {
     border-radius: 50%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
+}
+
+.frame1 {
+  // top: -110px;
+  background-color: coral;
+  transform: rotateY(-30deg) rotateX(-20deg);
+  // transform: rotateY(-210deg) rotateX(20deg) translateY(10%);
+  // translateY(100px)
+  // position: absolute;
+}
+.frame2 {
+  // left: -100px;
+  background-color: goldenrod;
+  // transform: rotateY(-200deg) rotateX(10deg) translateX(10%) translateY(-10%);
+}
+.frame3 {
+  // top: 120px;
+  // left: -180px;
+  background-color: burlywood;
+  // transform: rotateY(-170deg) rotateX(-10deg) translateX(20%) translateY(-20%);
 }
