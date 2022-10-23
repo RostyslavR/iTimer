@@ -1,16 +1,13 @@
 .postcard {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100vw;
-  // height: 100vh;
-  text-align: center;
-  // font-size: 40px;
-  // font-weight: 700;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+
   font-family: 'Bodoni Moda', serif;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
 
 .postcard-background {
@@ -18,11 +15,10 @@
   z-index: -1;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   @media screen and (min-width: $tablet) {
     width: 100vw;
-    // height: 100vh;
     object-fit: fill;
   }
 }
@@ -31,20 +27,35 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   color: var(--text-color);
-  // color: salmon;
-  margin-top: 20px;
+  text-align: center;
+  margin: 20px 0 20px;
+
   @media screen and (min-width: $tablet) {
     font-size: 50px;
+    margin: 0;
+  }
+}
+
+.container-postcard {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 6%;
   }
 }
 
 .frames-block {
-  width: 100%;
-  height: 30vh;
+  width: 80%;
   perspective: 800px;
   @media screen and (min-width: $tablet) {
-    width: 40%;
-    height: 30vh;
+    max-width: 35%;
+    height: 80vh;
   }
 }
 
@@ -55,10 +66,7 @@ h1 {
   justify-content: flex-start;
   gap: 10%;
   padding: 10px;
-  // width: 400px;
-  // height: 150px;
   min-width: 100%;
-  min-height: 20%;
   box-shadow: 0 5px 10px var(--bkg-color);
 
   & p {
@@ -67,29 +75,77 @@ h1 {
   }
 
   & img {
-    width: 125px;
-    height: 125px;
+    display: block;
+    max-width: 30%;
     border-radius: 50%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
 .frame1 {
-  // top: -110px;
   background-color: coral;
-  transform: rotateY(-30deg) rotateX(-20deg);
-  // transform: rotateY(-210deg) rotateX(20deg) translateY(10%);
-  // translateY(100px)
-  // position: absolute;
+  transform: rotateY(-30deg) rotateX(-20deg) translateX(10%);
 }
+
 .frame2 {
-  // left: -100px;
   background-color: goldenrod;
-  // transform: rotateY(-200deg) rotateX(10deg) translateX(10%) translateY(-10%);
+  transform: rotateY(-15deg) rotateX(-10deg) translateX(-3%) translateY(-10%);
 }
 .frame3 {
-  // top: 120px;
-  // left: -180px;
   background-color: burlywood;
-  // transform: rotateY(-170deg) rotateX(-10deg) translateX(20%) translateY(-20%);
+  transform: rotateY(10deg) rotateX(10deg) translateX(-10%) translateY(-20%);
+}
+
+.card {
+  height: 40%;
+  width: 50%;
+  position: relative;
+  text-align: center;
+
+  &-front,
+  &-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    background-color: rgb(255, 244, 79);
+    backface-visibility: hidden;
+    border-radius: 20px;
+    perspective: 800px;
+  }
+  &-back {
+    transform: rotateY(180deg);
+  }
+  &:hover .card-front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .card-back {
+    transform: rotateY(360deg);
+  }
+
+  &-img {
+    width: 70%;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  & p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  @media screen and (max-width: $tablet) {
+    transform: translate(-50px, 30px) rotateZ(-35deg);
+  }
+  @media screen and (min-width: $tablet) {
+    flex: 0 1 20%;
+    height: 65vh;
+  }
 }
