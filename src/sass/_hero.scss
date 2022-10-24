@@ -22,12 +22,6 @@
   text-transform: uppercase;
 }
 
-// .time-data-departure {
-//   color: var(--text-color);
-//   text-transform: uppercase;
-//   // margin-bottom: 10px;
-// }
-
 .date-departure-input {
   outline-style: none;
   border-style: none;
@@ -52,30 +46,19 @@
   }
 }
 
-// .left-description {
-//   color: var(--text-color);
-//   text-align: center;
-// }
-
 .clock {
   flex: 1 80%;
   text-align: center;
   color: var(--clock-color);
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 900;
   font-family: Orbitron;
-  //   line-height: 1.71;
-  // letter-spacing: 0.03em
-  // letter-spacing: 7px;
   @media screen and (min-width: $tablet) {
     font-size: 80px;
   }
 }
 
 .info-block {
-  // display: flex;
-  // justify-content: space-between;
-  // color: var(--info-color);
   color: rgb(14, 1, 9);
   font-size: 22px;
   font-weight: 500;
@@ -98,18 +81,12 @@
   border-style: none;
   font-size: 28px;
   font-weight: 700;
-  // text-align: center;
-  // color: var(--text-color);
   background-color: inherit;
   &:hover,
   &:focus {
-    // color: black;
     background-color: var(--bkg-color);
     border-radius: 10px;
   }
-  // @media screen and (min-width: $tablet) {
-  //   font-size: 28px;
-  // }
 }
 
 .wether {
@@ -117,17 +94,14 @@
   align-items: center;
   & img {
     background-color: var(--bkg-color);
-    // background-color: black;
     border-radius: 25%;
   }
 }
 
 .wether-temp {
   font-size: 32px;
-  // @media screen and (min-width: $tablet) {
-  //   font-size: 32px;
-  // }
 }
+
 .wether-desc {
   margin-bottom: 50px;
   @media screen and (min-width: $tablet) {
