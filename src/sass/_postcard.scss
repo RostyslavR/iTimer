@@ -147,7 +147,9 @@ h1 {
   }
   @media screen and (min-width: $tablet) {
     flex: 0 1 20%;
-    height: 65vh;
+    // height: 65vh;
+    height: 30vw;
+    align-self: flex-start;
   }
 }
 
