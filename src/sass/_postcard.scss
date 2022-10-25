@@ -1,5 +1,6 @@
 .postcard {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11,11 +12,11 @@
 }
 
 .postcard-background {
+  height: 100vh;
   position: fixed;
   z-index: -1;
   top: 0;
   left: 0;
-  height: 100%;
   object-fit: cover;
   @media screen and (min-width: $tablet) {
     width: 100vw;
@@ -29,7 +30,6 @@ h1 {
   color: var(--text-color);
   text-align: center;
   margin: 20px 0 20px;
-
   @media screen and (min-width: $tablet) {
     font-size: 50px;
     margin: 0;
@@ -51,11 +51,10 @@ h1 {
 }
 
 .frames-block {
-  width: 80%;
+  max-width: 80%;
   perspective: 800px;
   @media screen and (min-width: $tablet) {
     max-width: 35%;
-    height: 80vh;
   }
 }
 
@@ -133,9 +132,11 @@ h1 {
   }
 
   &-img {
-    width: 70%;
-    max-width: 100%;
+    max-width: 70%;
     align-self: center;
+    @media screen and (min-width: ($tablet + 100px)) {
+      max-width: 100%;
+    }
   }
 
   & p {
@@ -147,14 +148,8 @@ h1 {
   }
   @media screen and (min-width: $tablet) {
     flex: 0 1 20%;
-    // height: 90%;
-    height: 75vh;
-    // height: 36vw;
+    height: 95%;
+    max-height: 500px;
     align-self: flex-start;
   }
-}
-
-.back-img {
-  display: block;
-  // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }

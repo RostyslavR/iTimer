@@ -53,7 +53,6 @@ async function handleCityInfo() {
     refs.DepartureCityInput.value = `${departureData.name} ${departureData.sys.country}`;
     refs.DepartureCityInfo.innerHTML = makeMarkUp(departureData);
   } else {
-    // refs.DepartureCityInput.value = 'Sorry';
     refs.DepartureCityInfo.innerHTML = `${departureData.message}`;
   }
 
@@ -62,7 +61,6 @@ async function handleCityInfo() {
     refs.ArrivalCityInput.value = `${arrivalData.name} ${arrivalData.sys.country}`;
     refs.ArrivalCityInfo.innerHTML = makeMarkUp(arrivalData);
   } else {
-    // refs.DepartureCityInput.value = 'Sorry';
     refs.ArrivalCityInfo.innerHTML = `${departureData.message}`;
   }
 }
@@ -84,11 +82,6 @@ function makeMarkUp(data, nameInputId) {
     </div>
 `;
 }
-
-// function toQueryStr(str) {
-//   //removes all spaces and inserts commas between words //
-//   return str.trim().replace(/ {2,}/g, ' ').replace(/ /g, ',');
-// }
 
 function toTextualDescription(degree) {
   if (degree > 337.5) return 'Northerly';
